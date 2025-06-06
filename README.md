@@ -8,6 +8,6 @@ Project to try out and to practice Python features and libraries.
 
 Some good online resources that I use:
 
-1. (Learn X in Y minutes, Where X=Python)[https://learnxinyminutes.com/python/]
-2. (Lerne X in Y Minuten, Wobei X=Python)[https://learnxinyminutes.com/de/python/]
-3. (Apprendre X en Y minutes, Où X=Python)[https://learnxinyminutes.com/fr/python/]
+1. [Learn X in Y minutes, Where X=Python](https://learnxinyminutes.com/python/)
+2. [Lerne X in Y Minuten, Wobei X=Python](https://learnxinyminutes.com/de/python/)
+3. [Apprendre X en Y minutes, Où X=Python](https://learnxinyminutes.com/fr/python/)
