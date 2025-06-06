@@ -1,2 +1,2 @@
 # MyPythonLab
-Playing around with Python!
+Project to try out and to practice Python features and libraries.
