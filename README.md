@@ -12,3 +12,4 @@ Some good online resources that I use:
 2. [Lerne X in Y Minuten, Wobei X=Python](https://learnxinyminutes.com/de/python/)
 3. [Apprendre X en Y minutes, Où X=Python](https://learnxinyminutes.com/fr/python/)
 4. [await in python](https://www.geeksforgeeks.org/await-in-python/)
+5. [mock_open](https://docs.python.org/3.3/library/unittest.mock.html#mock-open)
