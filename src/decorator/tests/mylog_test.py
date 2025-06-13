@@ -32,6 +32,7 @@ def test_logme_for_none(mock_print, mock_open):
     # but target function was called
     mock_print.assert_called_once()
 
+
 @patch("builtins.open", create=True)
 @patch("builtins.print", create=True)
 def test_logme_for_info(mock_print, mock_open):
@@ -42,13 +43,15 @@ def test_logme_for_info(mock_print, mock_open):
     """
     mock_print.__name__ = "print"
 
-    # logme returns a wrapper function for the passed function, and I am calling it directly
+    # logme returns a wrapper function for the passed
+    # function, and I am calling it directly
     logme(mock_print, level=Level.INFO)()
 
     # one write call to the log output
     mock_open.assert_called_with(LOG_FILE_NAME, "a+")
     # target function was called
     mock_print.assert_called_once()
+
 
 @patch("builtins.open", create=True)
 @patch("builtins.print", create=True)
@@ -60,7 +63,8 @@ def test_logme_for_debug(mock_print, mock_open):
     """
     mock_print.__name__ = "print"
 
-    # logme returns a wrapper function for the passed function, and I am calling it directly
+    # logme returns a wrapper function for the passed
+    # function, and I am calling it directly
     logme(print, level=Level.DEBUG)()
 
     # in this case, two write calls to the log output

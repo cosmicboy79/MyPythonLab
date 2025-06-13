@@ -198,3 +198,7 @@ cython_debug/
 
 # user generated files
 *output.log
+
+# Flake8
+flake8-report
+

@@ -8,12 +8,15 @@ from functools import wraps
 from enum import Enum
 from datetime import datetime
 
+
 class Level(Enum):
     NONE = 0
     INFO = 1
     DEBUG = 2
 
+
 LOG_FILE_NAME = "output.log"
+
 
 # If you’ve called @name without arguments, then the
 # decorated function will be passed in as _func. If you’ve
@@ -23,18 +26,23 @@ LOG_FILE_NAME = "output.log"
 # that you can’t call the remaining arguments as positional arguments.
 def logme(_func=None, *, level: Level = Level.NONE):
     def decorated_function(func):
-        @wraps(func) # this ensures docstring, function name, arguments list, etc. are all copied
-                     # to the wrapped function - instead of being replaced with wrapper's info
+        # "wraps" ensures docstring, function name, arguments list,
+        # etc. are all copied to the wrapped function - instead of
+        # being replaced with wrapper's info
+        @wraps(func)
         def wrapper(*args, **kwargs):
             if show_info():
                 with open(LOG_FILE_NAME, "a+") as log_file:
-                    log_file.writelines("[{}] Executing function: {}\n".format(get_current_timestamp(), func.__name__))
+                    log_file.writelines("[{}] Executing function: {}\n".format(
+                        get_current_timestamp(), func.__name__))
 
             result = func(*args, **kwargs)
 
             if show_debug():
                 with open(LOG_FILE_NAME, "a+") as log_file:
-                    log_file.writelines("[{}] Result of function {} is: {}\n".format(get_current_timestamp(), func.__name__, result))
+                    log_file.writelines("[{}] Result of function {} is: {}\n"
+                                        .format(get_current_timestamp(),
+                                                func.__name__, result))
 
             return result
 
@@ -63,4 +71,3 @@ def logme(_func=None, *, level: Level = Level.NONE):
     # Apply the decorator to the function immediately.
     else:
         return decorated_function(_func)
-
