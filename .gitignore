@@ -195,3 +195,6 @@ cython_debug/
 
 # PyCharm
 .idea
+
+# user generated files
+*output.log
