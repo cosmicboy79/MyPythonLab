@@ -39,6 +39,7 @@ jobs:
       with:
         name: flake8-html-report
         path: flake8-report/
+        retention-days: 1
     - name: Test with pytest
       run: |
         pytest -vv
