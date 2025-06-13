@@ -1,3 +1,6 @@
+"""
+Using the @logme decorator.
+"""
 from logging.mylog import logme, Level
 
 @logme
