@@ -17,6 +17,7 @@ def test_sequential_run(mock_print):
 
     mock_print.assert_has_calls(order_of_calls, any_order=False)
 
+
 @patch('builtins.print', create=True)
 def test_concurrent_run(mock_print):
     concurrent.main()

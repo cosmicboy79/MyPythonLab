@@ -1,0 +1,7 @@
+[flake8]
+format = html
+htmldir = flake8-report
+count = True
+max-complexity = 10
+statistics = True
+max-line-length = 127
