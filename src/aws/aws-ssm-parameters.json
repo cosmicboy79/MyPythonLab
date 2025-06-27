@@ -1,0 +1,16 @@
+{
+  "Parameters": [
+    {
+      "Name": "Steve Rogers",
+      "Value": "Captain America",
+      "Type": "String",
+      "Description": "Sentinel of Liberty, Avenger"
+    },
+    {
+      "Name": "Peter Parker",
+      "Value": "Spider-Man",
+      "Type": "String",
+      "Description": "Friendly Neighborhood, Avenger"
+    }
+  ]
+}
